@@ -6,4 +6,16 @@ it 'renders HTML in the /new template' do
 visit new_post_path
 expect(page).to have_content('Post Form')
 end
+
+<form>
+  <label>Post title:</label><br>
+  <input type="text" id="post_title" name="post[title]"><br>
+ 
+  <label>Post description:</label><br>
+  <textarea id="post_description" name="post[description]"></textarea><br>
+ 
+  <input type="submit" value="Submit Post">
+</form>
+ 
+<%= params.inspect %>
 end
